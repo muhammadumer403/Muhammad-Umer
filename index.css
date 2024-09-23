@@ -1,0 +1,55 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --background-color: #2D0036; /* make sure this is spelled correctly */
+    --heading-color: #FFFF00;
+    --text-color: #fff;
+    --secondary-color: #380143;
+}
+
+button {
+    transition: 0.3s all cubic-bezier(0.19, 1, 0.22, 1);
+    overflow: hidden;
+  }
+  .mousefollower{
+    mix-blend-mode: lighten !important;
+    opacity: 0.7;
+    z-index: 10;
+  }
+  button::after {
+    content: "";
+    width: 100%;
+    height: 110%;
+    background: white;
+    position: absolute;
+    bottom: -110%;
+    border-radius: 50%;
+    transition: 0.7s all cubic-bezier(0.19, 1, 0.22, 1);
+    
+    left: 0;
+  }
+  button:hover::after {
+    bottom: 0;
+    border-radius: 0;
+  }
+  button:hover a, button:hover h4 {
+    color: #000;
+    position: relative;
+    z-index: 9;
+  }
+
+.page1 h1 span{
+  -webkit-text-stroke: 0.5px #fff;
+  color: transparent;
+  
+  font-style: normal;
+  
+  
+}
+
+._canvas_container{
+  z-index: 9 !important;
+}

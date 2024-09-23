@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Umer</title>
+    <link
+      rel="shortcut icon"
+      href="./public/favicon.png"
+      type="image/x-icon"
+    />
+    <meta name="description" content="I am Muhammad Umer. I am currently a student at Virtual University Pakistan .A Creative Frontend Website Developer. I am currently doing freelauncing. And I am Open to all opertunites.">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "var(--background-color)",
+              heading: "var(--heading-color)",
+              secondary: "var(--secondary-color)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="w-screen overflow-x-hidden h-screen max-h-screen bg-background">
+    <div
+      class="loading w-screen h-screen bg-background fixed top-0 left-0 z-30"
+    >
+      <div
+        class="w-[50vmin] h-[50vmin] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        <div
+          class="h-full after:absolute after:content-[''] after:top-0 after:left-0 after:w-full animate-[spin_2s_infinite_linear] after:h-full md:after:border-l-[30px] after:border-l-[15px] md:after:border-t-[30px] before:absolute before:content-[''] before:top-0 before:left-0 before:w-full before:h-full before:border-r-[30px] before:border-b-[30px] before:border-[#00000010] before:rounded-full after:rounded-full relative"
+        >
+          <h2
+            class="counter text-white absolute text-[5vmax] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40"
+          >
+            <span id="count" class="text-white inline-block font-['Raleway']"
+              >01</span
+            >
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div
+      class="h-full mobilenav w-full bg-[#00000049] z-[9] top-[10%] -translate-y-full fixed md:hidden"
+    >
+      <div
+        class="innerloader bg-secondary flex flex-col text-right px-5 py-5 items-right w-full h-[30vh] ] text-white rounded-bl-2xl rounded-br-2xl"
+      >
+        <a class="text-5xl uppercase font-['Raleway'] font-bold" href="#about"
+          >About</a
+        >
+        <a class="text-5xl uppercase font-['Raleway'] font-bold" href="#project"
+          >Projects</a
+        >
+        <a class="text-5xl uppercase font-['Raleway'] font-bold" href="#process"
+          >Process</a
+        >
+        <a class="text-5xl uppercase font-['Raleway'] font-bold" href="#contact"
+          >Contact</a
+        >
+      </div>
+    </div>
+    <main class="min-h-screen text-white relative font-['Raleway']">
+      <nav
+        data-scroll
+        class="md:h-[5vw] md:px-10 md:py-5 z-10 px-5 py-0 md:bg-transparent bg-secondary fixed w-full flex items-center justify-between md:top-0 mf:left-0 backdrop-blur"
+      >
+        <div class="logo nav-link md:h-[7vw] h-[10vh] magnet flex items-center justify-center">
+          <a class="italic !font-serif md:text-[2vmax] text-[3vmax]  font-black text-heading " href="#home">
+            M.UMER
+          </a>
+        </div>
+        <div class="links md:flex hidden gap-10 nav-link">
+          <h2
+            class="magnet font-semibold after:absolute relative after:bottom-0 after:left-0 after:h-[2px] after:rounded-full after:w-full after:scale-x-0 hover:after:scale-x-[1] after:transition-all after:duration-300 after:bg-white"
+          >
+            <a href="#about">About</a>
+          </h2>
+          <h2
+            class="magnet font-semibold after:absolute relative after:bottom-0 after:left-0 after:h-[2px] after:rounded-full after:w-full after:scale-x-0 hover:after:scale-x-[1] after:transition-all after:duration-300 after:bg-white"
+          >
+            <a href="#project">Projects</a>
+          </h2>
+          <h2
+            class="magnet font-semibold after:absolute relative after:bottom-0 after:left-0 after:h-[2px] after:rounded-full after:w-full after:scale-x-0 hover:after:scale-x-[1] after:transition-all after:duration-300 after:bg-white"
+          >
+            <a href="#process">Process</a>
+          </h2>
+        </div>
+        <div class="cta nav-link">
+          <button
+            class="magnet border-white border-2 px-5 py-2 rounded-full overflow-hidden relative hidden md:block relative"
+          >
+            <a href="#contact"><span class="block">Contact Me</span></a>
+          </button>
+          <button
+            class="border-white menubtn border-2 px-5 py-2 rounded-full text-sm overflow-hidden relative block md:hidden"
+          >
+            <a>Menu</a>
+          </button>
+        </div>
+      </nav>
+
+      <div
+        data-scroll
+        data-scroll-speed="-0.2"
+        id="home"
+        class="page1 h-[70vh] md:h-[100vh] w-full flex flex-col justify-center items-center overflow-hidden"
+      >
+        <div class="h-fit overflow-y-hidden w-fit">
+          <h1 class="text-[6.8vw] italic font-black uppercase relative">
+            <span class="hover">I am</span> Muhammad Umer
+          </h1>
+        </div>
+        <div class="h-fit overflow-y-hidden w-fit">
+          <h1 class="text-[6.8vw] font-black italic uppercase relative">
+            I am <span class="hover">Muhammad</span> Umer
+          </h1>
+        </div>
+        <div class="h-fit overflow-y-hidden w-fit">
+          <h1 class="text-[6.8vw] font-black italic uppercase relative">
+            I am Muhammad <span class="hover">Umer</span>
+          </h1>
+        </div>
+      </div>
+      <div
+        class="page2 h-fit py-32 px-5"
+        id="about"
+        data-scroll
+        data-scroll-speed="-0.2"
+      >
+        <div class="flex">
+          <h1 class="text-heading text-[30px] font-bold">About</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="#FFFF00"
+            width="35"
+          >
+            <path
+              d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z"
+            ></path>
+          </svg>
+        </div>
+        <div
+          class="aboutUs text h-fit flex py-[5vmax] items-center text-center text-[3vmax] md:text-[2vmax] font-normal justify-center"
+        >
+          <p class="md:w-1/2">
+            The Frontend Architect with expertise in HTML, CSS, JavaScript, and
+            Tailwind CSS, specializes in creating immersive web applications
+            using GSAP, ScrollTrigger, and Locomotive Scroll. I use Figma to
+            transform ideas into visually appealing interfaces, ensuring quality
+            and innovation.
+          </p>
+        </div>
+      </div>
+      <div class="page3" id="project" data-scroll>
+        <div class="flex px-5 py-32">
+          <h1 class="text-heading text-[30px] font-bold">My Projects</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="#FFFF00"
+            width="35"
+          >
+            <path
+              d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z"
+            ></path>
+          </svg>
+        </div>
+        <div
+          class="projects gap-20 md:gap-x-[14.5vw] flex items-center justify-around flex-wrap w-[90%] mx-auto"
+        >
+          <div
+            data-scroll
+            data-scroll-speed="0.2"
+            class="project w-[90%] md:w-[28vw] h-[60vh] md:mb-[60vh] flex-shrink-0 bg-background"
+          >
+            <a href="https://works-studio-lac.vercel.app/" target="_blank">
+              <h1
+              class="py-2 px-2 font-black md:text-[1.2vmax] text-white border-b-2 my-2"
+            >
+              WORKS STUDIO
+            </h1>
+            <div class="img bg-transparent h-[80%]">
+              <img
+                src="public/works.PNG"
+                class="h-full w-full object-cover object-center"
+                alt="work"
+                srcset=""
+              />
+            </div>
+            <div
+              class="px-5 w-full flex items-center justify-between h-[5vh] font-semibold text-white border-t-2 my-2"
+            >
+              <h2 class="md:text-[1vmax] pt-2">Website Development</h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="pt-2"
+                fill="white"
+                width="30"
+              >
+                <path
+                  d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z"
+                ></path>
+              </svg>
+            </div>
+            </a>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="-0.2"
+            class="project w-[90%] md:w-[28vw] h-[60vh] flex-shrink-0 bg-background"
+          >
+           <a href="https://thisismagma.vercel.app" target="_blank">
+             <h1
+              class="py-2 px-2 font-black md:text-[1.2vmax] border-b-2 my-8 text-white"
+            >
+              CUBERTO'S MAGMA
+            </h1>
+            <div class="img bg-transparent h-[80%]">
+              <img
+                src="public/cuberto.png"
+                class="h-full w-full object-cover object-right-bottom"
+                alt="cuberto"
+                srcset=""
+              />
+            </div>
+            <div
+              class="px-5 w-full flex border-t-2 my-8 items-center justify-between h-[5vh] font-semibold text-white h"
+            >
+              <h2 class="md:text-[1vmax] pt-2">Website Development</h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="pt-2"
+                fill="white"
+                width="30"
+              >
+                <path
+                  d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z"
+                ></path>
+              </svg>
+            </div>
+           </a>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="0.1"
+            class="project md:mb-[28.5vh] w-[90%] h-[60vh] md:h-[70vh] md:w-[80vw] bg-background flex-shrink-0"
+          >
+           <a href="https://sundownstudio-three.vercel.app/" target="_blank">
+             <h1
+              class="py-2 px-2 border-b-2 my-2 text-white font-black md:text-[1.2vmax]"
+            >
+              SUNDOWN STUDIO
+            </h1>
+            <div class="img h-[80%] md:h-[84%]">
+              <img
+                src="public/sd.PNG"
+                class="h-full w-full object-cover md:object-left object-[0%_50%]"
+                alt="sundownstudio"
+                srcset=""
+              />
+            </div>
+            <div
+              class="px-5 w-full border-t-2 my-2 flex items-center justify md:h-[4vh] justify-between font-semibold text-white"
+            >
+              <h2 class="md:text-[1vmax] pt-2">Website Development</h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="pt-2"
+                fill="white"
+                width="30"
+              >
+                <path
+                  d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z"
+                ></path>
+              </svg>
+            </div>
+           </a>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="-0.2"
+            class="project w-[90%] md:w-[28vw] h-[60vh] flex-shrink-0 bg-background"
+          >
+            <a href="https://obys-agency-eta.vercel.app/" target="_blank">
+              <h1
+                class="py-2 px-2 border-b-2 my-2 font-black md:text-[1.2vmax] text-white"
+              >
+                OBYS AGENCY
+              </h1>
+              <div class="img h-[80%]">
+                <img
+                  src="public/obys.png"
+                  class="h-full w-full object-cover md:object-center object-[35%_50%]"
+                  alt="obys AGENCY"
+                  srcset=""
+                />
+              </div>
+              <div
+                class="px-5 w-full border-t-2 my-2 flex items-center justify-between h-[5vh] font-semibold text-white"
+              >
+                <h2 class="md:text-[1vmax] pt-2">Website Development</h2>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="pt-2"
+                  fill="white"
+                  width="30"
+                >
+                  <path
+                    d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="0.2"
+            class="project w-[90%] md:w-[28vw] h-[60vh] md:mb-[60vh] flex-shrink-0 bg-background"
+          >
+            <a href="https://muhammadumer403.github.io/twogoodclone/" target="_blank">
+              <h1
+                class="py-2 px-2 border-b-2 my-2 font-black md:text-[1.2vmax] text-white"
+              >
+                TWO GOOD CO.
+              </h1>
+              <div class="img h-[80%]">
+                <img
+                  src="public/twogood.PNG"
+                  class="h-full w-full object-cover object-left"
+                  alt="two good"
+                  srcset=""
+                />
+              </div>
+              <div
+                class="px-5 w-full border-t-2 my-2 flex items-center justify-between h-[5vh] font-semibold text-white"
+              >
+                <h2 class="md:text-[1vmax] pt-2">Website Development</h2>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="pt-2"
+                  fill="white"
+                  width="30"
+                >
+                  <path
+                    d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="page4 md:w-[90%] md:mx-auto flex flex-col"
+        id="process"
+        data-scroll
+        data-scroll-speed="-0.1"
+      >
+        <div class="flex py-32 px-5 md:px-0">
+          <h3 class="text-heading text-[30px] font-bold">Our Process</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="#FFFF00"
+            width="35"
+          >
+            <path
+              d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="steps flex flex-col gap-28 py-10 px-10">
+          <div
+            class="step h-[25vh] flex flex-col md:grid md:grid-cols-[10%_30%_40%] items-center text-center md:text-start"
+          >
+            <div class="number w-[30%]">
+              <h4
+                class="rounded-full border-white border-2 w-fit text-[30px] px-4 py-2"
+              >
+                01
+              </h4>
+            </div>
+            <div
+              class="info w-full text-start realtive mr-auto col-span-2 md:row-span-2 md:mb-auto"
+            >
+              <i
+                class="hidden md:block ri-search-2-line ri-2x text-heading"
+              ></i>
+              <h4 class="text-[30px] md:text-[1vw] text-center md:text-start">
+                Step 1: Product design Research
+              </h4>
+              <p class="hidden md:block w-[70%]">
+                This initial step involves a systematic and thorough exploration
+                of the market landscape, user needs, and existing solutions.
+              </p>
+            </div>
+            <div
+              class="line line1 relative mx-8 h-[25vh] my-5 hidden md:block bg-zinc-700 w-1"
+            >
+              <div
+                class="line-inner h-0 w-full bg-[#fff] absolute top-0 left-0"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="step h-[25vh] flex flex-col md:grid md:grid-cols-[10%_40%_30%] items-center text-center"
+          >
+            <div class="number w-[30%]">
+              <h4
+                class="rounded-full border-white border-2 w-fit text-[30px] px-4 py-2"
+              >
+                02
+              </h4>
+            </div>
+            <div
+              class="info w-full text-start realtive mr-auto col-span-2 md:row-span-2 md:mb-auto"
+            >
+              <i
+                class="hidden md:block ri-slideshow-line ri-2x text-heading"
+              ></i>
+              <h4 class="text-[30px] md:text-[1vw] text-center md:text-start">
+                Step 2: Ul design in figma
+              </h4>
+              <p class="hidden md:block w-[70%]">
+                This step involves creating the visual and interactive aspects
+                of the product using Figma, turning research insights into
+                wireframes, layouts, and detailed mockups.
+              </p>
+            </div>
+            <div
+              class="line line2 mx-8 relative h-[25vh] bg-zinc-700 my-5 hidden md:block w-1"
+            >
+              <div
+                class="line-inner h-0 w-full bg-[#fff] absolute top-0 left-0"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="step h-[25vh] flex flex-col md:grid md:grid-cols-[10%_40%_30%] items-center md:content-start text-center"
+          >
+            <div class="number w-[30%]">
+              <h4
+                class="rounded-full border-white border-2 w-fit text-[30px] px-4 py-2"
+              >
+                03
+              </h4>
+            </div>
+            <div
+              class="info w-full text-start realtive mr-auto col-span-2 md:row-span-2 md:mb-auto"
+            >
+              <i
+                class="hidden md:block ri-code-box-line ri-2x text-heading"
+              ></i>
+              <h4 class="text-[30px] md:text-[1vw] text-center md:text-start">
+                Step 3: code and develop
+              </h4>
+              <p class="hidden md:block w-[70%]">
+                his step involves converting the design into a fully functional
+                product by writing code, integrating frontend and backend
+                components, and ensuring everything works seamlessly across
+                devices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="flex items-center text-left md:flex-row-reverse justify-around px-10 flex-col py-10 gap-10"
+        id="contact"
+      >
+        <div class="form">
+          <form
+            action="https://formsubmit.co/xyberneticxpace@gmail.com"
+            method="post"
+            class="flex flex-col gap-y-10 bg-secondary py-10 px-5 rounded-xl"
+          >
+            <div class="input-container flex flex-col relative">
+              <label for="name"
+                class="placeholder px-1 absolute top-0 left-0 text-start text-sm"
+              >
+                Your Name
+              </label>
+           
+                <input
+                type="text"
+                name="name"
+                id="name"
+                autocomplete="off"
+                class="input-name input h-full w-full py-1 bg-transparent outline-none"
+              />
+           
+              <svg
+                class="line-svg overflow-visible"
+                width="300"
+                height="2"
+                viewBox="0 0 300 2"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="elastic-line"
+                  d="M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 300 0.999512 300 0.999512"
+                  stroke="#D1D4DA"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="input-container flex flex-col relative">
+              <label for="email"
+                class="placeholder px-1 absolute top-0 left-0 text-start text-sm"
+              >
+                Your Email
+              </label>
+         
+              <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="off"
+              class="input-email input h-full w-full py-1 bg-transparent outline-none"
+            />
+            
+              <svg
+                class="line-svg overflow-visible"
+                width="300"
+                height="2"
+                viewBox="0 0 300 2"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="elastic-line"
+                  d="M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 300 0.999512 300 0.999512"
+                  stroke="#D1D4DA"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="input-container flex flex-col relative">
+              <label for="message"
+                class="placeholder px-1 absolute top-0 left-0 text-start text-sm"
+              >
+                Your Message ...
+              </label>
+
+              <textarea
+              autocomplete="off"
+              name="message"
+              id="message"
+              rows="5"
+              class="input-name input h-full w-full py-1 bg-transparent outline-none resize-none text-sm"
+            ></textarea>
+             
+              <svg
+                class="line-svg overflow-visible"
+                width="300"
+                height="2"
+                viewBox="0 0 300 2"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="elastic-line"
+                  d="M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 300 0.999512 300 0.999512"
+                  stroke="#D1D4DA"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <button
+              type="submit"
+              class="px-5 py-2 relative border-2 rounded-xl self-start ml-[10px]"
+            >
+              <a href="">Submit</a>
+            </button>
+          </form>
+        </div>
+        <div class="contact">
+          <div class="w-full ">
+            <h5 class="text-[36px] font-semibold">Say Hi</h5>
+            <h5 class="text-[24px] underline"><a href="mailto: info@umer.me">info@mumer.me</a></h5>
+            <h5 class="text-[24px] underline "><a href="https://www.fiverr.com/s/yvwW200" >Fiverr</a></h5>
+          </div>
+          <h5 class="text-[36px] font-semibold">Whatsapp</h5>
+          <a class="text-[24px] underline" href="https://wa.me/+923321467914"
+            >+92 332 1467914</a
+          >
+          <div></div>
+        </div>
+        <div class="logo ">
+          <h6 class="italic !font-serif text-[4vmax] font-black  text-heading"> 
+            M.UMER
+          </h6>
+        </div>
+      </footer>
+    </main>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+  <script
+    type="text/javascript"
+    src="https://unpkg.com/sheryjs/dist/Shery.js"
+  ></script>
+  <script src="./main.js"></script>
+</html>
